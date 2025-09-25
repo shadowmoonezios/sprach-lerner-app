@@ -10,7 +10,7 @@ app.use(express.json());
 
 mongoose.connect('mongodb://localhost/sprach-lerner', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB verbunden'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('MongoDB connection error:', err));
 
 app.get('/', (req, res) => {
   res.send('Willkommen zur Sprach Lerner App!');
